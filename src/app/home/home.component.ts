@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { VinoService } from '../shared/vino.service';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(protected service: VinoService) { }
 
   ngOnInit(): void {
+    this.getUserLogged();
+  }
+
+  getUserLogged(){
+    
+    // this.service.getUser().subscribe(user=> {
+    //   console.log(user)
+    // })
   }
 
 }

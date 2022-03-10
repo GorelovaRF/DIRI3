@@ -11,12 +11,15 @@ import { CartComponent } from './component/cart/cart.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { DetailVinoComponent } from './detail-vino/detail-vino.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SpinnerComponent } from './component/spinner/spinner.component';
 import { SpinnerInterceptor } from './component/inceptor/spinner.interceptor';
 import { ErrorInterceptor } from './component/inceptor/error.interceptor';
 import { NewWineComponent } from './new-wine/new-wine.component';
 import { ErrorDivComponent } from './component/error-div/error-div.component';
+import { LoginComponent } from './login/login.component';
+import { SigninComponent } from './signin/signin.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +33,8 @@ import { ErrorDivComponent } from './component/error-div/error-div.component';
     SpinnerComponent,
     NewWineComponent,
     ErrorDivComponent,
+    LoginComponent,
+    SigninComponent,
     
   ],
   imports: [
@@ -37,7 +42,8 @@ import { ErrorDivComponent } from './component/error-div/error-div.component';
     AppRoutingModule,
     HttpClientModule,
     Ng2SearchPipeModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [{provide: HTTP_INTERCEPTORS,useClass: SpinnerInterceptor, multi:true},{provide: HTTP_INTERCEPTORS,useClass: ErrorInterceptor, multi:true}],
   bootstrap: [AppComponent]

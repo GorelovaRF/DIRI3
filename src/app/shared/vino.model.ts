@@ -9,3 +9,9 @@ export class Vino {
     public id!: number;
     public region!: string;
 }
+
+export class User {
+    public id?: number;
+    public email!: string;
+    public pass!: string;
+}

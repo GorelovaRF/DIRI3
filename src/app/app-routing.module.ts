@@ -5,18 +5,37 @@ import { HeaderComponent } from './component/header/header.component';
 import { ContactComponent } from './contact/contact.component';
 import { DetailVinoComponent } from './detail-vino/detail-vino.component';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 import { NewWineComponent } from './new-wine/new-wine.component';
+import { SigninComponent } from './signin/signin.component';
 
 
 const routes: Routes = [
+// {
+//   path: '',
+//   component: HomeComponent,
+//   pathMatch:'full'
+// },
+
 {
   path: '',
+  component: LoginComponent,
+  pathMatch:'full'
+},
+{
+  path: 'home',
   component: HomeComponent,
   pathMatch:'full'
 },
 
 {
   path: 'catalogo',
+  component: CatalogComponent,
+  pathMatch:'full'
+
+},
+{
+  path: 'nuevoVino/catalogo',
   component: CatalogComponent,
   pathMatch:'full'
 
@@ -42,6 +61,19 @@ const routes: Routes = [
   pathMatch:'full'
 
 },
+{
+  path: 'login',
+  component: LoginComponent,
+  pathMatch:'full'
+},
+{
+  path: 'signin',
+  component: SigninComponent,
+  pathMatch:'full'
+
+}
+
+
 
 ];
 
